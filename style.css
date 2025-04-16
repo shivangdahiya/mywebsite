@@ -1,0 +1,402 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+
+}
+.logo{
+    width: 80px;
+}
+.username{
+    display: flex;
+    align-content:baseline;
+    align-items: center;
+    /* border: 1px solid black; */
+    padding-left: 6rem;
+    margin-left: 2rem;
+}
+.name{
+    margin-left: -1.2rem;
+   
+    /* border: 1px solid black; */
+    padding-top: 1rem;
+    font-size: 28px;
+    font-weight: 500;
+    
+   
+}
+.bookmark{
+    display: flex;
+    gap: 2rem;
+    padding: 0 4rem;
+    /* border: 1px solid black; */
+    
+}
+.bookmark div{
+    font-size: 20px;
+    
+
+}
+.bookmark div a{
+    color: black;
+    /* border: 1px solid black; */
+    padding: 0 1rem;
+    
+}
+a{
+    text-decoration: none;
+}
+.bookmark div:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+.hero-section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+
+}
+.faded_text{
+    user-select: none;
+    font-size:7em;
+    font-weight: bold;
+    color: rgb(231,231,231);
+    bottom:1%; 
+    left: 1%;
+    transition: all 3s;
+
+
+}
+.role{
+    color:#e84949;
+    font-weight: 500;
+}
+.herosection-left{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding:0 10rem;
+   
+}
+.heading{
+    font-size: 35px;
+    color:#343d68;
+    font-weight: 500;
+
+}
+.sub-heading{
+    font-size: 45px;
+    line-height: 45px;
+    
+}
+.description{
+   
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.button{
+    background-color:white;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px  7px 0px #0000003f ;
+    position: relative;
+    z-index: 1;
+    width: 8rem;
+
+
+    
+}
+.button::before{
+    content: " ";
+    position: absolute;
+    background-color:#e84949 ;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    z-index: -1;
+}
+.button:hover::before{
+    transform: scaleX(1);
+    cursor: pointer;
+    transition: all 1.2s;
+
+}
+.absolute{
+    position: absolute;
+}
+
+.herosection-right{
+    position: relative;
+}
+.user-image{
+      padding: 2.5rem;
+    filter: grayscale(1);
+    transition: all 1s;
+    animation:scaleImage 5s linear infinite;
+   
+
+}
+.user-image img{
+    z-index: -9;
+    height: 15rem;
+    
+   
+}
+
+@keyframes scaleImage {
+    0%{
+        filter:grayscale(0);
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+        filter: grayscale(1);
+        box-shadow: 3px 3px 10px black;
+
+    }
+    100%{
+        transform: scale(1);
+        filter: grayscale(0);
+    }
+    
+}
+.icon-plus{
+    
+    z-index: 9;
+    bottom:-1rem;
+    right: 0;
+    animation-name: addanimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+}
+.icon-plus img{
+    width: 100px;
+}
+
+@keyframes addanimation {
+    0%{
+        transform: translateY(0px);
+        
+    }
+    50%{
+        transform: translateY(-15px);
+       
+    }
+    75%{
+        transform: rotateX(90deg);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+.icon-cube{
+    z-index: 9;
+    top: -1.5rem;
+    right: 0;
+    animation-name: cubeanimation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+
+    
+}
+.icon-cube img{
+    height: 5rem;
+}
+@keyframes cubeanimation {
+    0%{
+        transform: rotateZ(180deg);
+    }
+    50%{
+        transform: rotateZ(-180deg);
+    }
+    75%{
+        transform: translateX(20px);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+    
+}
+.project-section{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 100%;
+    background-color: rgb(191, 183, 183,0.25);
+    
+    flex-direction: column;
+}
+.page-header{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: 4rem;
+    color: #e84949;
+}
+.project-conatiner{
+    /* border: 1px solid black; */
+    margin-bottom: 7rem;
+    
+ 
+}
+.project-card{
+    border: 1px solid green;
+    margin-top: 4rem;
+    display: flex;
+    position: relative;
+    width: 44rem;
+    height: 23rem;
+    border-radius: 15px;
+   
+
+}
+.project-card:hover{
+    transform: scale(1.01);
+    transition: 1s;
+    filter: drop-shadow(3px 3px 10px rgba(19, 18, 18, 0.75));
+}
+.project-card:before{
+    content: " ";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    transform-origin:left;
+    position: absolute;
+    z-index: 1;
+    background-color: #373535;
+    transform: scaleX(0);
+    opacity: 0.25;
+    border-radius: 15px;
+}
+.project-card:hover::before{
+    transform: scaleX(1);
+    cursor: pointer;
+    transition: all 1.2s;
+
+}
+.image{
+    width: 44rem;
+    height: 23rem;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    border-radius: 15px;
+    
+}
+.project-number{
+    font-size: 10rem;
+    z-index: 1;
+    color:#e84949;
+    right: 0;
+    margin-top:-60px;
+    position: absolute;
+    opacity: 0;
+    z-index: 5;
+    
+}
+.project-card:hover .project-number{
+    opacity: 1;
+    transform: scale(1.02);
+    transition: 1s;
+    
+}
+.project-heading{
+    font-size: 2rem;
+    font-weight:bold;
+    left: 30%;
+    top: 20%;
+    position: absolute;
+    z-index: 5;
+
+}
+.project-card:hover .project-heading {
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+.project-subheading{
+    font-size: 1rem;
+    font-weight: bold;
+    left: 10%;
+    top: 35%;
+
+    position: absolute;
+    z-index: 5;
+}
+.project-card:hover .project-subheading{
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+.btn-grp{
+    position: absolute;
+    display: flex;
+    
+    bottom: 2rem;
+    left: 5rem;
+    z-index: 5;
+    border-radius: 1rem;
+
+}
+
+.project-card:hover .btn-grp{
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+
+.project-skills-container{
+    display: flex;
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    z-index: 5;
+    gap: 0.5rem;
+}
+.skills{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.skills:hover{
+    transform: scale(1.1);
+    transition: 0.8s;
+    cursor: pointer;
+}
+#project1{
+    margin-top: 5rem;
+}
+
+#project2{
+    margin-left: 13rem;
+
+}
+#project3{
+    margin-right:13rem ;
+}
