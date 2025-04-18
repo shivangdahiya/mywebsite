@@ -268,7 +268,7 @@ a{
  
 }
 .project-card{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     margin-top: 4rem;
     display: flex;
     position: relative;
@@ -399,4 +399,45 @@ a{
 }
 #project3{
     margin-right:13rem ;
+}
+
+.footer{
+    background-color:rgba(0, 0, 0, 0.50);
+}
+.instagram-image{
+    
+    width: 4rem;
+    border-radius: 100%;
+    
+}
+
+.linkedin-image{
+    width: 5rem;
+}
+.contact{
+    padding: 2rem ;
+    display: flex;
+    position: relative;
+    /* border: 5px solid black; */
+    font-size: 1.5rem;
+    overflow: hidden;
+    height:20rem;
+}
+.instagram{
+    position: absolute;
+    left: 15rem;
+    /* border: 1px solid black; */
+    bottom: -1rem;
+    
+    
+}
+.linkedin{
+    position: absolute;
+    bottom:-1.8rem ;
+    left: 10rem;
+}
+.contact h3{
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
 }
